@@ -32,6 +32,7 @@ namespace ProAgil.WebAPI
                 );
             // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddControllers();
+            services.AddCors();
             
         }
 
@@ -42,6 +43,8 @@ namespace ProAgil.WebAPI
             // {
             //     app.UseDeveloperExceptionPage();
             // }
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
