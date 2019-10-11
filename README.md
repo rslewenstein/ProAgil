@@ -1,3 +1,3 @@
 ## ProAgil Eventos
 
-WebAPI feita em .NetCore e Sqlite, utilizando o Linux.
+Primeiro exemplo de uma WebAPI em .Netcore, Angular e EF Core.
