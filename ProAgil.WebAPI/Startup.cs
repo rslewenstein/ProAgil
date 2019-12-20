@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ProAgil.Repository.Data;
+using ProAgil.Repository;
 
 namespace ProAgil.WebAPI
 {
@@ -22,6 +23,7 @@ namespace ProAgil.WebAPI
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
                 );
             // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<IProAgilRepository, ProAgilRepository>();
             services.AddControllers();
             services.AddCors();
             
